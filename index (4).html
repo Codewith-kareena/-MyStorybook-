@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>story book✨</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      overflow: hidden;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .heart {
+      position: fixed;
+      color: red;
+      font-size: 14px;
+      animation: fall linear infinite;
+      top: -20px;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    .start-button {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: pink;
+      color: black;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 25px;
+      font-size: 20px;
+      font-family: 'Pacifico', cursive;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 0 15px hotpink;
+    }
+
+    .content {
+      display: none;
+      color: white;
+      text-align: center;
+      padding-top: 80px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .sorry-text {
+      font-size: 36px;
+      font-family: 'Pacifico', cursive;
+      color: hotpink;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .slideshow {
+      max-width: 90%;
+      margin: 30px auto;
+      display: none;
+    }
+
+    .slide {
+      display: none;
+      animation: fadeTilt 5s;
+    }
+
+    @keyframes fadeTilt {
+      from {
+        opacity: 0;
+        transform: rotate(-3deg) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: rotate(3deg) scale(1);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .caption {
+      margin-top: 20px;
+      font-size: 24px;
+      font-family: 'Pacifico', cursive;
+      color: pink;
+      animation: moveText 2s infinite alternate;
+    }
+
+    @keyframes moveText {
+      0% { letter-spacing: 1px; }
+      100% { letter-spacing: 4px; }
+    }
+
+    .sparkle-border {
+      border: 5px solid pink;
+      box-shadow: 0 0 15px pink, 0 0 30px pink, 0 0 45px hotpink;
+      border-radius: 20px;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="/mana-apna-ishq-adhura-bulleya-song-trendingsong-lyricvideo-bulleyasong-aestheticedits-128-ytshorts.savetube.me.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Start Button -->
+  <button class="start-button" onclick="startStory()">Click here to start</button>
+
+  <!-- Main Content -->
+  <div class="content" id="story">
+    <div class="sorry-text" id="sorryText">@codewith_kareena...
+     #mystorybook🙂✨</div>
+
+    <div class="slideshow" id="slideshow">
+      <div class="slide">
+        <img src="/IMG_20250727_010858.jpg"alt="pic1"class="sparkle-border" style="width: 80%;">
+        <div class="caption">Mana apna ishq adhura💔</div>
+      </div>
+      <div class="slide">
+        <img src="/IMG_20250727_010528.jpg" alt="pic2" class="sparkle-border" style="width: 80%;">
+        <div class="caption">Dil na ispe sharminda hai...🥀</div>
+      </div>
+      <div class="slide">
+        <img src="/IMG_20250727_010438.jpg" alt="pic3" class="sparkle-border" style="width: 80%;">
+        <div class="caption">pura hoke khtm hua sb🥺</div>
+      </div>
+      <div class="slide">
+        <img src="/IMG_20250727_010455.jpg" alt="pic4" class="sparkle-border" style="width: 80%;">
+        <div class="caption">jo hai adha wo hi zinda hai...💔</div>
+      </div>
+      <div class="slide">
+        <img src="" alt="" class="" style=";">
+        <div class="caption"></div>
+      </div>
+      <div class="slide">
+        <img src="/IMG_20250727_010409.jpg" alt="pic7" class="sparkle-border" style="width: 80%;">
+        <div class="caption">Ho bethi rehti hai unmedein🕊️</div>
+      </div>
+      <div class="slide">
+        <img src="/IMG_20250727_012615.jpg" alt="pic8" class="sparkle-border" style="width: 80%;">
+        <div class="caption">Tere ghar ki dehlizon pe👀</div>
+      </div>
+       <div class="slide">
+   <img src="/IMG_20250727_012628.jpg" alt="pic8" class="sparkle-border" style="width: 80%;">
+   <div class="caption">Jiski na parwaah khatam ho🫂</div>
+ </div>
+ </div>
+      <div class="slide">
+        <img src="/IMG_20250727_012708.jpg" alt="pic9" class="sparkle-border" style="width: 80%;">
+        <div class="caption">Dil ye mera wahi parinda hai...🕊️</div></div>
+        <div class="slide">
+          <img src=""alt=""class=""style="";>
+        </div>
+        <div class="slide">
+          <img src="/IMG_20250727_012655.jpg"alt="pic10" class="sparkle-border" style="width: 80%;">
+          <div class="caption">Bakshe tu jo pyar se mujhko🤌🏻</div>
+        </div>
+        <div class="slide">
+          <img src="/IMG_20250727_012731.jpg"alt="pic11"class="sparkle-border"
+          style="width: 80%">
+        <div class="caption">toh ho meri rihai...</div>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Falling hearts
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerText = "♥️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 10 + 10) + "px";
+      heart.style.animationDuration = (2 + Math.random() * 3) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 150);
+
+    // Start story
+    function startStory() {
+      document.querySelector(".start-button").style.display = "none";
+      const story = document.getElementById("story");
+      const music = document.getElementById("bg-music");
+      story.style.display = "block";
+      music.play();
+
+      setTimeout(() => {
+        document.getElementById("slideshow").style.display = "block";
+        showSlides();
+      }, 3000);
+    }
+
+    // Slideshow control
+    let slideIndex = 0;
+    function showSlides() {
+      const slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slideIndex++;
+      if (slideIndex > slides.length) return;
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2560); // 2.6 seconds per slide
+    }
+  </script>
+
+</body>
+</html>
+//@codewith_kareena
